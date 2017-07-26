@@ -1,0 +1,45 @@
+<html>
+<script type="text/javascript" src="http://www.dukelearntoprogram.com/course1/common/js/image/SimpleImage.js"> 
+</script>
+
+<div>
+<h1>Image Filter Tool</h1>
+Upload any two complementary images to the Image Filter, the output will be a single image with the selected filter applied.
+</div>
+<br>
+<canvas id = "canOriginal"></canvas>
+<canvas id = "canFiltered"></canvas>
+
+<div>
+<br>  
+  <h2>Load Image</h2>
+  <input id = "fileIn" type = "file" multiple = "false" accept = "image/*" onchange = "loadImg()">
+</div>
+
+<div>
+  <br>
+<h2>Choose Filter</h2>
+
+<input type = "button" value = "Greyscale" onclick = "greyScale()">
+
+<input type = "button" value = "Turn Image Red" onclick = "redScale()">
+  
+<input type = "button" value = "Feel the Rainbow!" onclick = "rainbowScale()">
+    
+<input type = "button" value = "Reset Filtered Image" onclick = "resetImage()"> 
+
+<input type = "button" value = "Clear Images" onclick = "clearCanvas()">   
+</div>
+
+<div> 
+    <br>Enter Red Value (0-255):
+<input type = "range" min = "0" max = "255" value = "128" id = "redSlide" oninput = "redSldr()">
+    <br>Enter Green Value (0-255):
+<input type = "range" min = "0" max = "255" value = "128" id = "greenSlide" oninput = "greenSldr()">
+    <br>Enter Blue Value (0-255):
+<input type = "range" min = "0" max = "255" value = "128" id = "blueSlide" oninput = "blueSldr()">
+    <br>
+<input type = "button" value = "Set Colors" onclick = "colorPicker()">   
+</div>
+
+</html>
